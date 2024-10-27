@@ -1,0 +1,22 @@
+     Reading Assignment:  When should accessor methods be used?
+Read the following article and find the best possible answer to the above question: Holub, Allen. “Why getter and setter methods are evil” JavaWorld, 5 Sep. 2003, https://www.infoworld.com/article/2073723/why-getter-and-setter-methods-are-evil.html
+You should expand your research to other sources as well. For the response, give a summary of your findings in the form of a mindmap. You can draw this mind map by hand and take a picture of your work or use any online tools. In both cases, the accepted format for the image file is one of the following: .png, .jpg, .jpeg and .pdf.
+ 
+Trả lời:
+-> 1. Tính Đóng Gói và Getter/Setter
+Getter và setter thường bị coi là phá vỡ tính đóng gói của đối tượng, vì chúng cho phép truy cập trực tiếp đến các thuộc tính bên trong.
+Theo Holub, việc cung cấp getter và setter biến các đối tượng thành “dữ liệu cấu trúc” thay vì là “đối tượng thực” có hành vi riêng.
+
+-> 2. Nhược Điểm của Getter và Setter
+Phá vỡ tính đóng gói: Getter và setter mở cửa cho việc sửa đổi trực tiếp các thuộc tính, điều này có thể gây ra sự phụ thuộc không cần thiết giữa các lớp.
+Khó bảo trì mã nguồn: Khi có quá nhiều getter và setter, mã nguồn dễ bị rối và khó duy trì, vì các thay đổi trong thuộc tính có thể ảnh hưởng đến nhiều phần khác nhau của mã.
+Phụ thuộc vào dữ liệu thay vì hành vi: Khi getter và setter được sử dụng rộng rãi, mã thường xoay quanh việc thao tác dữ liệu hơn là hành vi thực tế của đối tượng.
+
+-> 3. Khi Nào Nên Sử Dụng Getter và Setter?
+Khi thực sự cần thiết: Nên sử dụng trong trường hợp không còn cách nào khác để truy cập hoặc sửa đổi thuộc tính mà không phá vỡ tính toàn vẹn của lớp.
+Kiểm soát truy cập: Sử dụng setter khi cần xác thực hoặc điều chỉnh dữ liệu trước khi gán cho thuộc tính.
+Đảm bảo tính nhất quán của đối tượng: Getter và setter có thể hữu ích khi bạn cần đảm bảo rằng các thay đổi thuộc tính không làm đối tượng rơi vào trạng thái không hợp lệ.
+
+-> 4. Các Giải Pháp Thay Thế Getter và Setter
+Thiết kế đối tượng có hành vi rõ ràng: Tạo ra các phương thức thực hiện hành vi cụ thể thay vì dùng getter/setter để thao tác dữ liệu trực tiếp.
+Truyền tham số vào constructor: Đặt giá trị ban đầu cho đối tượng qua constructor thay vì thông qua các setter.
