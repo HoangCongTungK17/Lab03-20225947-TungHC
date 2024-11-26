@@ -1,3 +1,7 @@
+package hust.soict.dsai.aims;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.cart.Cart;
+
 
 public class Aims {
 
@@ -33,5 +37,3 @@ public class Aims {
         anOrder.removeDigitalVideoDisc(dvd4);
 }
 	}
-
-

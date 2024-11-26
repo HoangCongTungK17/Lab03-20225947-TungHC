@@ -1,0 +1,10 @@
+1. Tại sao sau khi gọi swap(jungleDVD, cinderellaDVD), tiêu đề của hai đối tượng vẫn không thay đổi?
+Trong Java, các tham số luôn được truyền bằng giá trị (pass by value). Điều này có nghĩa là khi bạn truyền các đối tượng vào phương thức swap, bạn chỉ truyền bản sao của tham chiếu đến các đối tượng đó. Cụ thể:
+•	Phương thức swap(jungleDVD, cinderellaDVD) chỉ hoán đổi các bản sao tham chiếu (local variables o1 và o2), nhưng không thay đổi được tham chiếu gốc (jungleDVD và cinderellaDVD) trong phương thức main.
+•	Do đó, việc hoán đổi chỉ xảy ra bên trong phương thức swap, và không ảnh hưởng đến các đối tượng thực tế được tham chiếu bởi jungleDVD và cinderellaDVD.
+
+2. Tại sao sau khi gọi changeTitle(jungleDVD, cinderellaDVD.getTitle()), tiêu đề của jungleDVD lại thay đổi?
+Trong Java, khi truyền một đối tượng vào phương thức, bản sao của tham chiếu đến đối tượng đó được truyền đi. Tuy nhiên, bản sao này vẫn trỏ đến cùng một đối tượng trong bộ nhớ. Điều này cho phép phương thức changeTitle thay đổi các thuộc tính của đối tượng được truyền vào.
+•	Dòng dvd.setTitle(title) thay đổi trực tiếp thuộc tính title của đối tượng mà tham chiếu (dvd) trỏ đến. Vì dvd và jungleDVD trỏ đến cùng một đối tượng, sự thay đổi được phản ánh ra bên ngoài.
+•	Tuy nhiên, dòng dvd = new DigitalVideoDisc(oldTitle) tạo một đối tượng mới. Tham chiếu này chỉ tồn tại trong phương thức changeTitle và không ảnh hưởng đến jungleDVD bên ngoài.
+
